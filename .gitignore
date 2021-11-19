@@ -135,3 +135,4 @@ __pycache__/options.cpython-36.pyc
 dump.rdb
 userSignUpList.csv
 unapprovedemails.txt
+/data/*

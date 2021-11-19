@@ -1,0 +1,22 @@
+version: "3.9"
+   
+services:
+  db:
+    image: postgres
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=mydatabase
+      - POSTGRES_USER=mydatabaseuser
+      - POSTGRES_PASSWORD=sosecure
+  web:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./resume_scanner:/usr/src/app/resume_scanner
+      - ./nltk_data:/usr/local/nltk_data
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    working_dir: /usr/src/app

@@ -131,7 +131,28 @@ To get a local copy up and running follow these simple example steps.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+<!-- GETTING STARTED Docker -->
 
+## Getting Started Docker
+
+### Prerequisites
+
+Download and Install Docker [https://docs.docker.com/desktop/](https://docs.docker.com/desktop/)
+
+### Run app via docker-compose
+
+```sh
+docker-compose up
+```
+
+Note: must be in the folder containding the docker-compose.yml
+
+### Access app in browser
+
+browse to [http://localhost:8000/resumescanner/](http://localhost:8000/resumescanner/
+)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- USAGE EXAMPLES -->
 ## Usage

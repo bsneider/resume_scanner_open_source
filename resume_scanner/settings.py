@@ -30,7 +30,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django_extensions',
     'fuzzywuzzy',
-    'exponent_server_sdk',
+    # 'exponent_server_sdk',
     'paramiko',
     'resumes',
     'health',
@@ -67,7 +67,12 @@ WSGI_APPLICATION = 'resume_scanner.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DATABASES = databases
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'mydatabase',
+    }
+}
 
 
 # Internationalization
@@ -82,3 +87,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = '+qv2hh-c(#@e*#tf+$yehx8!t3hv+tc=38$y$cck-hwtcdhfmp'
